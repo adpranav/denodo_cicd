@@ -1,0 +1,2 @@
+﻿CREATE OR REPLACE VIEW union_flights FOLDER = '/dauto' AS SELECT f1.sno AS sno1, f1.from_0 AS from_0_1, f1.to_0 AS to_0_1, f1.airline AS airline1, f2.sno AS sno2, f2.from_0 AS from_0_2, f2.to_0 AS to_0_2, f2.airline AS airline2 FROM flights AS f1, flights AS f2 WHERE 1 = 1;
+
