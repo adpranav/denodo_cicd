@@ -1,0 +1,32 @@
+﻿CREATE OR REPLACE WRAPPER DF placeholder
+    FOLDER = '/dauto/another/once'
+    DATASOURCENAME=placeholder
+    OUTPUTSCHEMA (
+        column0 = 'Column0',
+        column1 = 'Column1',
+        column2 = 'Column2',
+        column3 = 'Column3'
+    );
+
+CREATE OR REPLACE TABLE placeholder I18N au_cst (
+        column0:text,
+        column1:text,
+        column2:text,
+        column3:text
+    )
+    FOLDER = '/dauto/another/once'
+    CACHE OFF
+    TIMETOLIVEINCACHE DEFAULT
+    ADD SEARCHMETHOD placeholder(
+        I18N au_cst
+        CONSTRAINTS (
+             ADD column0 NOS ZERO ()
+             ADD column1 NOS ZERO ()
+             ADD column2 NOS ZERO ()
+             ADD column3 NOS ZERO ()
+        )
+        OUTPUTLIST (column0, column1, column2, column3
+        )
+        WRAPPER (df placeholder)
+    );
+
