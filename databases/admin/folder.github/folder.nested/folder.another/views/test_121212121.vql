@@ -9,8 +9,8 @@
     );
 
 CREATE OR REPLACE TABLE test_121212121 I18N au_cst (
-        column0:text,
-        column1:text,
+        column0:int,
+        column1:int,
         column2:text,
         column3:text
     )

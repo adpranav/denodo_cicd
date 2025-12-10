@@ -9,7 +9,7 @@
     );
 
 CREATE OR REPLACE TABLE flights I18N au_cst (
-        sno:text,
+        sno:decimal,
         from_0:int,
         to_0:text,
         airline:int
