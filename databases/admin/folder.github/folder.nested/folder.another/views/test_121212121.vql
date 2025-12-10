@@ -1,0 +1,32 @@
+﻿CREATE OR REPLACE WRAPPER DF test_121212121
+    FOLDER = '/github/nested/another'
+    DATASOURCENAME=test_121212121
+    OUTPUTSCHEMA (
+        column0 = 'Column0',
+        column1 = 'Column1',
+        column2 = 'Column2',
+        column3 = 'Column3'
+    );
+
+CREATE OR REPLACE TABLE test_121212121 I18N au_cst (
+        column0:text,
+        column1:text,
+        column2:text,
+        column3:text
+    )
+    FOLDER = '/github/nested/another'
+    CACHE OFF
+    TIMETOLIVEINCACHE DEFAULT
+    ADD SEARCHMETHOD test_121212121(
+        I18N au_cst
+        CONSTRAINTS (
+             ADD column0 NOS ZERO ()
+             ADD column1 NOS ZERO ()
+             ADD column2 NOS ZERO ()
+             ADD column3 NOS ZERO ()
+        )
+        OUTPUTLIST (column0, column1, column2, column3
+        )
+        WRAPPER (df test_121212121)
+    );
+

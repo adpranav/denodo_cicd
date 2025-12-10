@@ -8,7 +8,7 @@
 
 CREATE OR REPLACE TABLE code I18N au_cst (
         code:text,
-        full_0:text
+        full_0:int
     )
     FOLDER = '/dauto'
     CACHE OFF
