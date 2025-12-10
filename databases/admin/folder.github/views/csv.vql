@@ -12,7 +12,7 @@ CREATE OR REPLACE TABLE csv I18N au_cst (
         column0:text,
         column1:text,
         column2:text,
-        column3:text
+        column3:int
     )
     FOLDER = '/github'
     CACHE OFF
