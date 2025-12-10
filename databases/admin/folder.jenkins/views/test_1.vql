@@ -10,7 +10,7 @@
 
 CREATE OR REPLACE TABLE test_1 I18N au_cst (
         column0:text,
-        column1:text,
+        column1:int,
         column2:int,
         column3:text
     )

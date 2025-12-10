@@ -1,6 +1,6 @@
-﻿CREATE OR REPLACE WRAPPER DF test_121212121
-    FOLDER = '/github/nested/another'
-    DATASOURCENAME=test_121212121
+﻿CREATE OR REPLACE WRAPPER DF placeholder_12
+    FOLDER = '/jenkins/folder/folder_2/folder_3'
+    DATASOURCENAME=placeholder_12
     OUTPUTSCHEMA (
         column0 = 'Column0',
         column1 = 'Column1',
@@ -8,16 +8,16 @@
         column3 = 'Column3'
     );
 
-CREATE OR REPLACE TABLE test_121212121 I18N au_cst (
-        column0:int,
-        column1:int,
-        column2:int,
-        column3:int
+CREATE OR REPLACE TABLE placeholder_12 I18N au_cst (
+        column0:text,
+        column1:text,
+        column2:text,
+        column3:text
     )
-    FOLDER = '/github/nested/another'
+    FOLDER = '/jenkins/folder/folder_2/folder_3'
     CACHE OFF
     TIMETOLIVEINCACHE DEFAULT
-    ADD SEARCHMETHOD test_121212121(
+    ADD SEARCHMETHOD placeholder_12(
         I18N au_cst
         CONSTRAINTS (
              ADD column0 NOS ZERO ()
@@ -27,6 +27,6 @@ CREATE OR REPLACE TABLE test_121212121 I18N au_cst (
         )
         OUTPUTLIST (column0, column1, column2, column3
         )
-        WRAPPER (df test_121212121)
+        WRAPPER (df placeholder_12)
     );
 
