@@ -7,7 +7,7 @@
     );
 
 CREATE OR REPLACE TABLE code I18N au_cst (
-        code:text,
+        code:int,
         full_0:int
     )
     FOLDER = '/dauto'
