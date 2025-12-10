@@ -12,7 +12,7 @@ CREATE OR REPLACE TABLE test I18N au_cst (
         column0:int,
         column1:text,
         column2:text,
-        column3:text
+        column3:int
     )
     FOLDER = '/dauto/another'
     CACHE OFF

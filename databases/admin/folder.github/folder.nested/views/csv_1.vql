@@ -11,7 +11,7 @@
 CREATE OR REPLACE TABLE csv_1 I18N au_cst (
         column0:text,
         column1:text,
-        column2:text,
+        column2:int,
         column3:text
     )
     FOLDER = '/github/nested'
