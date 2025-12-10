@@ -1,0 +1,9 @@
+﻿# REQUIRES-PROPERTIES-FILE - # Do not remove this comment!
+CREATE OR REPLACE DATASOURCE DF test_121212122
+    FOLDER = '/jenkins/folder/folder_2'
+    ROUTE LOCAL 'LocalConnection' '${databases.admin.folder.jenkins.folder.folder.folder.folder_2.datasources.df.test_121212122.ROUTE.LOCAL.PATH}' FILENAMEPATTERN = ''
+    CHARSET = 'UTF-8'
+    COLUMNDELIMITER = ','
+    ENDOFLINEDELIMITER = '\n'
+    HEADER = FALSE;
+

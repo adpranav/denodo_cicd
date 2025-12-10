@@ -12,7 +12,7 @@ CREATE OR REPLACE TABLE flights I18N au_cst (
         sno:text,
         from_0:int,
         to_0:text,
-        airline:text
+        airline:int
     )
     FOLDER = '/dauto'
     CACHE OFF
